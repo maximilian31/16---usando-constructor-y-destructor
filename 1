@@ -1,0 +1,42 @@
+/*
+Confeccionar una clase llamada Sumatoria que solicite la carga valores enteros por teclado.
+Finalizar la carga de valores al ingresar el cero. Mostrar en el destructor 
+la suma de los valores ingresados.
+*/
+
+#include "iostream"
+using namespace std;
+
+class Sumatoria{
+    private:
+        int valor;
+        int suma = 0;
+    public:
+        Sumatoria();
+        ~Sumatoria();
+};
+
+   Sumatoria::Sumatoria()
+   {
+       do
+       {
+           cout << "Introducir valores enteros: " << endl;
+           cin >> valor;
+           suma = suma + valor;
+       }
+       
+       while(valor != 0);
+   }
+   
+    
+   Sumatoria::~Sumatoria()
+   {
+       cout << "La suma de los valores ingresados es: " << suma ;
+       
+   }
+   
+int main()
+{
+    Sumatoria suma1;
+    return 0;
+}
